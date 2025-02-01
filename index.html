@@ -10,7 +10,6 @@
 </head>
 
 <body class="gen-back">
-    <script src="Setup.js"></script>
     <div class="container-fluid ps-0 pe-0 text-center">
         <div class="container-fluid text-center nav-ground">
             <div class="btn-group">
@@ -49,9 +48,9 @@
                 </div>
             </div>
             <div class="text-center mt-2 ps-1 pe-1 for-tb-back">
-                <h4>Февраль:</h4>
+                <h4 id = "head-calen"></h4>
                 <div class=" table-responsive mt-1 text-center">
-                    <table class="table table-bordered  mx-auto bg-light">
+                    <table  class="table table-bordered  mx-auto bg-light">
                         <thead>
                             <tr>
                                 <th>ПН</th>
@@ -63,26 +62,14 @@
                                 <th>ВС</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                            </tr>
-                            <tr>
-                            </tr>
+                        <tbody id="calendar">
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+    <script src="Setup.js"></script>
 </body>
 
 </html>
