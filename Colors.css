@@ -1,3 +1,6 @@
+.tab{
+    max-height: 14em;
+}
 .nav-ground{
     background-color:grey;
 }
