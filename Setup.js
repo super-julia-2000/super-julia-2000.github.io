@@ -1,4 +1,6 @@
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+document.getElementById('Main').hidden = true;
+document.getElementById('Clients').hidden = false;
+/*const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 const header_calendar = document.getElementById('head-calen');
 const today = new Date();
@@ -11,4 +13,4 @@ for (var week = 0, i = 1; week < 4; week++) {
         var newText = document.createTextNode(i);
         newCell.appendChild(newText);
     }
-}
+}*/
