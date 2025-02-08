@@ -1,5 +1,9 @@
 document.getElementById('Main').hidden = true;
 document.getElementById('Clients').hidden = false;
+console.log("hello everynyan");
+function onFocusTel(){
+    console.log("jjk");
+}
 /*const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 const header_calendar = document.getElementById('head-calen');
