@@ -10,3 +10,9 @@
 .for-tb-back{
     background-color:goldenrod;
 }
+.non-sel-tr{
+    background-color:white;
+}
+.sel-tr{
+    background-color:gray;
+}

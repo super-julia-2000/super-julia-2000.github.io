@@ -35,6 +35,15 @@ function outFocusTel(caller) {
         }
     }
 }
+function client_switch(caller){
+    if(caller.id == "btn_pattern"){
+        document.getElementById("btn_clients").className="btn btn-light";
+        caller.className = "btn btn-secondary";
+    } else {
+        document.getElementById("btn_pattern").className="btn btn-light";
+        caller.className = "btn btn-secondary";
+    }
+}
 /*const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
     "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 const header_calendar = document.getElementById('head-calen');

@@ -13,7 +13,7 @@
     <div class="container-fluid text-center nav-ground">
         <div class="btn-group">
             <button type="button" class="btn btn-dark">Главная</button>
-            <button type="button" class="btn btn-dark">Клиенты</button>
+            <button type="button" onclick="content_tb()" class="btn btn-dark">Клиенты</button>
             <button type="button" class="btn btn-dark">Услуги</button>
             <button type="button" class="btn btn-dark">Отчёты</button>
         </div>
@@ -112,62 +112,69 @@
     <!--  Clients  -->
     <div id="Clients" hidden class="container-fluid text-center">
         <div class="btn-group mt-1">
-            <button type="button" class="btn btn-light">Клиенты</button>
-            <button type="button" class="btn btn-light">Шаблоны</button>
+            <button type="button" id="btn_clients" onclick="client_switch(this)"
+                class="btn btn-secondary">Клиенты</button>
+            <button type="button" id="btn_pattern" onclick="client_switch(this)" class="btn btn-light">Шаблон</button>
         </div>
-        <div class = "container for-tb-back">
-            <div class = "container" style="width: 35em; max-width: 100%;">
-                <div class="mt-5" style ="width: 30em; max-width: 100%;">
-                    <span class = "float-start">ФИО:</span>
-                    <input type="text" class="form-control" placeholder="Геращенко - не очень">
+        <!--  book_of_clients  -->
+        <div class="container-fluid" hidden>
+            <div class="container for-tb-back">
+                <div class="container" style="width: 35em; max-width: 100%;">
+                    <div class="mt-5" style="width: 30em; max-width: 100%;">
+                        <span class="float-start">ФИО:</span>
+                        <input type="text" class="form-control" placeholder="Геращенко - не очень">
+                    </div>
+                    <div class=" mt-1 " style="width: 9em; max-width: 100%;">
+                        <span class="float-start">Телефон:</span>
+                        <input id="tel1" value="+7" type="tel" class="form-control">
+                    </div>
+                    <div class=" mt-1 " style="width: 30em; max-width: 100%;">
+                        <span class="float-start">Организация:</span>
+                        <input type="text" class="form-control" placeholder="Юлия - очень">
+                    </div>
+                    <div class=" mt-1 " style="width: 30em; max-width: 100%;">
+                        <span class="float-start">Почта:</span>
+                        <input type="text" class="form-control" placeholder="лвщлвщл">
+                        <button type="button" class="btn mt-1 btn-light">Поиск</button>
+                    </div>
                 </div>
-                <div class=" mt-1 " style ="width: 9em; max-width: 100%;">
-                    <span class = "float-start">Телефон:</span>
-                    <input id = "tel1"  value="+7" type="tel" class="form-control">
-                </div>
-                <div class=" mt-1 " style ="width: 30em; max-width: 100%;">
-                    <span class = "float-start">Организация:</span>
-                    <input type="text" class="form-control" placeholder="Юлия - очень">
-                </div>
-                <div class=" mt-1 " style ="width: 30em; max-width: 100%;">
-                    <span class = "float-start">Почта:</span>
-                    <input type="text" class="form-control" placeholder="лвщлвщл">
-                    <button type="button" class="btn mt-1 btn-light">Поиск</button>
+            </div>
+            <div class="text-center mt-5 ps-1 pe-1 for-tb-back">
+                <button type="button" class="btn mt-1 mx-auto btn-light">Добавить</button>
+                <button type="button" class="btn mt-1 mx-auto btn-light">Удалить</button>
+                <button type="button" onclick="Export()" class="btn mt-1 mx-auto btn-light">Экспорт</button>
+                <div class=" table-responsive mt-1 tab text-center">
+                    <table class="table table-bordered  mx-auto ">
+                        <thead>
+                            <tr>
+                                <th><input onclick="sel_all_tr(this)" type="checkbox"></th>
+                                <th>ФИО</th>
+                                <th>Организация</th>
+                                <th>Телефон</th>
+                                <th>Почта</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_clients">
+                            <!--<tr id="tag" class="table-default">
+                                <td><input onclick="sel_tr(this)" type = "checkbox"></td>
+                                <td>
+                                    jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
+                                </td>
+                                <td>10</td>
+                                <td>04.02.25</td>
+                                <td>04.02.25</td>
+                            </tr>-->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5 ps-1 pe-1 for-tb-back">
-            <button type="button" class="btn mt-1 mx-auto btn-light">Добавить</button>
-            <button type="button" class="btn mt-1 mx-auto btn-light">Удалить</button>
-            <button type="button" onclick="onClick()" class="btn mt-1 mx-auto btn-light">Экспорт</button>
-            <div class=" table-responsive mt-1 tab text-center">
-                <table class="table table-bordered  mx-auto bg-light">
-                    <thead>
-                        <tr>
-                            <th><input type = "checkbox"></th>
-                            <th>ФИО</th>
-                            <th>Телефон</th>
-                            <th>Почта</th>
-                            <th>Организация</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type = "checkbox"></td>
-                            <td>
-                                jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
-                            </td>
-                            <td>10</td>
-                            <td>04.02.25</td>
-                            <td>04.02.25</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class ="container-fluid">
+            
         </div>
     </div>
     <script src="Setup.js"></script>
-    <script src="csv_handler.js"></script>
+    <script src="tb_client_handler.js"></script>
 </body>
 
 </html>
