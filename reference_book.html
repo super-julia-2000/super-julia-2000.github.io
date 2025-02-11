@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link href="./styles/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles/Colors.css" rel="stylesheet">
+    <link href="./styles/nav_bar.css" rel="stylesheet">
+</head>
+
+<body class="gen-back">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav pe-2 ps-2">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <div class="container-fluid pe-1 ps-1">
+            <div class="row mt-4 pe-0 ps-0">
+                <div class="col pe-0 ps-0">
+                    <div class="btn-group-vertical w-100">
+                        <button type="button" onclick="to_main()" class="btn btn-dark">Главная</button>
+                        <button type="button" onclick="to_clients()" class="btn btn-dark">Клиенты</button>
+                        <button type="button" class="btn btn-dark">Услуги</button>
+                        <button type="button" class="btn btn-dark">Отчёты</button>
+                        <button type="button" class="btn btn-dark">Справочник</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="nav_bar.js"></script>
+</body>
+</html>

@@ -4,3 +4,6 @@ function to_main(){
 function to_clients(){
     window.location.href = "./clients.html";
 }
+function to_reference_book(){
+    window.location.href = "./reference_book.html";
+}
