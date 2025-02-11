@@ -35,8 +35,8 @@ function sel_all_tr(caller){
 }
 function content_tb() {
     //location.replace("./t1.html");
-    window.location.href = "./t1.html";
-    /*const table = document.getElementById('tb_clients');
+    //window.location.href = "./t1.html";
+    const table = document.getElementById('tb_clients');
     
     for (let i = 0; i < 4; i++) {
         var newRow = table.insertRow();
@@ -54,5 +54,5 @@ function content_tb() {
             newCell.appendChild(newText);
         }
     }
-    console.log(table.children[0]);*/
+    console.log(table.children[0]);
 }
