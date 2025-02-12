@@ -8,6 +8,7 @@
     <link href="./styles/bootstrap.min.css" rel="stylesheet">
     <link href="./styles/Colors.css" rel="stylesheet">
     <link href="./styles/nav_bar.css" rel="stylesheet">
+    <link href="./styles/modal.css" rel="stylesheet">
 </head>
 
 <body class="gen-back">
@@ -28,28 +29,31 @@
             </div>
         </div>
     </nav>
-    <div class="container text-center for-tb-back" style = "width: 40em; max-width:100%;">
+    <div class="container text-center for-tb-back" style="width: 40em; max-width:100%;">
         <h5>Создать:</h5>
         <div class="btn-group mt-1">
-            <button type="button" id="btn_create_group" onclick="client_switch(this)"
+            <button type="button" id="btn_create_group" onclick="create_group()"
                 class="btn btn-light">Группу</button>
-            <button type="button" id="btn_create_list" onclick="client_switch(this)" class="btn btn-light">Список</button>
+            <button type="button" id="btn_create_list"
+                class="btn btn-light">Список</button>
         </div>
         <div class=" table-responsive mt-1 tab text-center">
             <table class="table table-bordered  mx-auto ">
                 <thead>
                     <tr>
-                        <th>  d</th>
+                        <th> d</th>
+                        <th> d</th>
                         <th>Наименование:</th>
                     </tr>
                 </thead>
                 <tbody id="tb_clients">
                     <tr id="tag" class="table-default">
-                        <td>gg</td>
+                        <td><img src="images/delete.png"></td>
+                        <td><img src="images/list.png"></td>
                         <td>
-                            jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                            gggggggggggggggggggggggggggggggggggggggggggggggggggg
+                            jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
                         </td>
+                    </tr>
                     <!--<tr id="tag" class="table-default">
                         <td><input onclick="sel_tr(this)" type = "checkbox"></td>
                         <td>
@@ -63,7 +67,19 @@
             </table>
         </div>
     </div>
-    <script src="nav_bar.js"></script>
+    <!-- The Modal -->
+    <div id="form_create_group" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Some text in the Modal..</p>
+            <button type="button" onclick="close_group()"
+                class="btn btn-light">Отмена</button>
+        </div>
+
+    </div>
+    <script src="scripts/gen_scipts/nav_bar.js"></script>
+    <script src="scripts/reference_book_scripts/modal_handler.js"></script>
 </body>
 
 </html>
