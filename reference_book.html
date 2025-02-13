@@ -69,12 +69,19 @@
     </div>
     <!-- The Modal -->
     <div id="form_create_group" class="modal">
-
         <!-- Modal content -->
-        <div class="modal-content">
-            <p>Some text in the Modal..</p>
-            <button type="button" onclick="close_group()"
-                class="btn btn-light">Отмена</button>
+        <div class="container modal-content" style="width: 30em; max-width: 100%;">
+            <input type = "text" class="form-control" placeholder="Название">
+            <div class = "row">
+                <div class="col">
+                    <button type="button" onclick="close_group_creater()"
+                class="btn w-100 btn-secondary">Создать</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="close_group_creater()"
+                    class="btn w-100 btn-secondary">Отмена</button>
+                </div>
+            </div>
         </div>
 
     </div>
