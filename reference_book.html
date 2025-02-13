@@ -81,7 +81,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div id="form_create_list" class="modal">
         <!-- Modal content -->
@@ -91,7 +90,7 @@
                 <label for="name_list">Название</label>
             </div>
             <div class="form-floating">
-                <select class="form-select" id="sel1" name="sellist">
+                <select class="form-select" id="data_type">
                     <option>Строка</option>
                     <option>Число</option>
                     <option>Телефон</option>
@@ -99,7 +98,7 @@
                     <option>Дата</option>
                     <option>Валюта</option>
                 </select>
-                <label for="sel1" class="form-label">Тип данных:</label>
+                <label for="data_type" class="form-label">Тип данных:</label>
             </div>
             <div class="row">
                 <div class="col">
@@ -111,7 +110,18 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <div id="form_edit_list" class="modal">
+        <!-- Modal content -->
+        <div class="container modal-content" style="width: 30em; max-width: 100%;">
+            <input type="text" class="form-control" placeholder="Название">
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="close_group_creater()"
+                        class="btn  btn-secondary">Закрыть</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts/gen_scipts/nav_bar.js"></script>
     <script src="scripts/reference_book_scripts/modal_handler.js"></script>

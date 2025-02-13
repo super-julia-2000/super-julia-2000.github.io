@@ -35,7 +35,7 @@
             <button type="button" id="btn_pattern" onclick="client_switch(this)" class="btn btn-light">Шаблон</button>
         </div>
         <!--  book_of_clients  -->
-        <div class="container-fluid text-center">
+        <div class="container-fluid text-center" hidden>
             <div class="container for-tb-back">
                 <div class="container" style="width: 35em; max-width: 100%;">
                     <div class="mt-4" style="width: 30em; max-width: 100%;">
@@ -87,9 +87,57 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            
+        <div class="text-center mt-5 ps-1 pe-1 for-tb-back">
+            <button type="button" class="btn mt-1 mx-auto btn-light">Добавить</button>
+            <div id="client_pattern" class="container-fluid">
+                <div class=" table-responsive mt-1 tab text-center" style="height: 40 em;max-height: 100%;">
+                    <table class="table table-bordered  mx-auto ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <p> </p>
+                                </th>
+                                <th>Название</th>
+                                <th>Тип</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_properties">
+                            <!--<tr id="tag" class="table-default">
+                                <td><input onclick="sel_tr(this)" type = "checkbox"></td>
+                                <td>
+                                    jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
+                                </td>
+                                <td>10</td>
+                                <td>04.02.25</td>
+                                <td>04.02.25</td>
+                            </tr>-->
+                            <tr>
+                                <td> </td>
+                                <td>ФИО</td>
+                                <td>Строка</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Телефон</td>
+                                <td>Телефон</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Организация</td>
+                                <td>Список</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Почта</td>
+                                <td>Почта</td> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+
+    </div>
     </div>
     <script src="scripts/clients_scripts/Setup.js"></script>
     <script src="scripts/clients_scripts/tb_client_handler.js"></script>
