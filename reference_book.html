@@ -32,10 +32,8 @@
     <div class="container text-center for-tb-back" style="width: 40em; max-width:100%;">
         <h5>Создать:</h5>
         <div class="btn-group mt-1">
-            <button type="button" id="btn_create_group" onclick="create_group()"
-                class="btn btn-light">Группу</button>
-            <button type="button" id="btn_create_list"
-                class="btn btn-light">Список</button>
+            <button type="button" id="btn_create_group" onclick="create_group()" class="btn btn-light">Группу</button>
+            <button type="button" id="btn_create_list" onclick="create_list()" class="btn btn-light">Список</button>
         </div>
         <div class=" table-responsive mt-1 tab text-center">
             <table class="table table-bordered  mx-auto ">
@@ -71,15 +69,45 @@
     <div id="form_create_group" class="modal">
         <!-- Modal content -->
         <div class="container modal-content" style="width: 30em; max-width: 100%;">
-            <input type = "text" class="form-control" placeholder="Название">
-            <div class = "row">
+            <input type="text" class="form-control" placeholder="Название">
+            <div class="row">
                 <div class="col">
                     <button type="button" onclick="close_group_creater()"
-                class="btn w-100 btn-secondary">Создать</button>
+                        class="btn w-100 btn-secondary">Создать</button>
                 </div>
                 <div class="col">
                     <button type="button" onclick="close_group_creater()"
-                    class="btn w-100 btn-secondary">Отмена</button>
+                        class="btn w-100 btn-secondary">Отмена</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="form_create_list" class="modal">
+        <!-- Modal content -->
+        <div class="container modal-content" style="width: 30em; max-width: 100%;">
+            <div class="form-floating mb-3 mt-3">
+                <input id="name_list" type="text" class="form-control" placeholder="Название">
+                <label for="name_list">Название</label>
+            </div>
+            <div class="form-floating">
+                <select class="form-select" id="sel1" name="sellist">
+                    <option>Строка</option>
+                    <option>Число</option>
+                    <option>Телефон</option>
+                    <option>Почта</option>
+                    <option>Дата</option>
+                    <option>Валюта</option>
+                </select>
+                <label for="sel1" class="form-label">Тип данных:</label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="close_list_creater()"
+                        class="btn w-100 btn-secondary">Создать</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="close_list_creater()" class="btn w-100 btn-secondary">Отмена</button>
                 </div>
             </div>
         </div>
