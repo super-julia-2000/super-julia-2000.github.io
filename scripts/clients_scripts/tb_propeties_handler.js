@@ -1,3 +1,4 @@
+const form_sel_list = document.getElementById('form_sel_list');
 const my_options = [new Option("Строка", 0),
     new Option("Число", 1),
     new Option("Телефон",2),
@@ -7,8 +8,9 @@ const my_options = [new Option("Строка", 0),
     new Option("Справочник","root"),
     ];
 function on_sel(){
-    var a = this.options[this.options.selectedIndex].value;
-    if(Number.isNaN(Number(a))){
+    var options_value = this.options[this.options.selectedIndex].value;
+    if(Number.isNaN(Number(options_value))){
+        form_sel_list.style.display = "block";
         console.log("jkl");
     }
 }
