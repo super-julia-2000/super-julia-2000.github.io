@@ -8,6 +8,7 @@
     <link href="./styles/bootstrap.min.css" rel="stylesheet">
     <link href="./styles/Colors.css" rel="stylesheet">
     <link href="./styles/nav_bar.css" rel="stylesheet">
+    <link href="./styles/modal.css" rel="stylesheet">
 </head>
 
 <body class="gen-back">
@@ -136,7 +137,54 @@
                 </div>
             </div>
         </div>
-
+        <!-- Modal content -->
+        <div id="form_create_group" class="modal">
+            <!-- Modal content -->
+            <div class="container modal-content" style="width: 30em; max-width: 100%;">
+                <input type="text" class="form-control" placeholder="Название">
+                <button type="button" onclick="close_group_creater()"
+                            class="btn  btn-secondary">Поиск</button>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" onclick="close_group_creater()"
+                            class="btn w-100 btn-secondary">Выбрать</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" onclick="close_group_creater()"
+                            class="btn w-100 btn-secondary">Отмена</button>
+                    </div>
+                </div>
+                <div class=" table-responsive mt-1 tab text-center" style="height: 40 em;max-height: 100%;">
+                    <table class="table table-bordered  mx-auto ">
+                        <thead>
+                            <tr>
+                                <th>Название</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_sel_list">
+                            <!--<tr id="tag" class="table-default">
+                                <td><input onclick="sel_tr(this)" type = "checkbox"></td>
+                                <td>
+                                    jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
+                                </td>
+                                <td>10</td>
+                                <td>04.02.25</td>
+                                <td>04.02.25</td>
+                            </tr>-->
+                            <tr>
+                                <td>Строка</td>
+                            </tr>
+                            <tr>
+                                <td>Строка</td>
+                            </tr>
+                            <tr>
+                                <td>Строка</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts/clients_scripts/Setup.js"></script>
     <script src="scripts/clients_scripts/tb_client_handler.js"></script>

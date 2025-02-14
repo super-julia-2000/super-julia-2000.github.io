@@ -4,8 +4,14 @@ const my_options = [new Option("Строка", 0),
     new Option("Почта",3),
     new Option("Дата",4),
     new Option("Валюта",5),
-    new Option("Справочник",6),
+    new Option("Справочник","root"),
     ];
+function on_sel(){
+    var a = this.options[this.options.selectedIndex].value;
+    if(Number.isNaN(Number(a))){
+        console.log("jkl");
+    }
+}
 function content_properties_tb() {
     const table = document.getElementById('tb_properties');
     var newRow = table.insertRow();
@@ -20,10 +26,9 @@ function content_properties_tb() {
     newCell.appendChild(newobj);
     newCell = newRow.insertCell();
     newobj = document.createElement("select");
-    console.log(newobj.options);
     for(var i=0;i<7;i++)
         newobj.options[i] = my_options[i];
     newobj.className = "form-select";
-    
+    newobj.addEventListener("change",on_sel);
     newCell.appendChild(newobj);
 }
