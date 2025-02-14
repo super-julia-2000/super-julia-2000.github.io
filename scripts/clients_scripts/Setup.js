@@ -34,8 +34,12 @@ function client_switch(caller){
     if(caller.id == "btn_pattern"){
         document.getElementById("btn_clients").className="btn btn-light";
         caller.className = "btn btn-secondary";
+        document.getElementById("book_of_clients").hidden = true;
+        document.getElementById("form_properties").hidden = false;
     } else {
         document.getElementById("btn_pattern").className="btn btn-light";
         caller.className = "btn btn-secondary";
+        document.getElementById("form_properties").hidden = true;
+        document.getElementById("book_of_clients").hidden = false;
     }
 }

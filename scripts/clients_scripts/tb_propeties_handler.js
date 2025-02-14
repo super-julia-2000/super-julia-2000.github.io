@@ -1,15 +1,8 @@
 const form_sel_list = document.getElementById('form_sel_list');
-const my_options = [new Option("Строка", 0),
-    new Option("Число", 1),
-    new Option("Телефон",2),
-    new Option("Почта",3),
-    new Option("Дата",4),
-    new Option("Валюта",5),
-    new Option("Справочник","root"),
-    ];
+var select_list;
 function on_sel(){
-    var options_value = this.options[this.options.selectedIndex].value;
-    if(Number.isNaN(Number(options_value))){
+    select_list = this;
+    if(this.options.selectedIndex == 6){
         form_sel_list.style.display = "block";
         console.log("jkl");
     }
@@ -28,9 +21,24 @@ function content_properties_tb() {
     newCell.appendChild(newobj);
     newCell = newRow.insertCell();
     newobj = document.createElement("select");
-    for(var i=0;i<7;i++)
-        newobj.options[i] = my_options[i];
+    newobj.options[0] = new Option("Строка", 0);
+    newobj.options[1] = new Option("Число", 1);
+    newobj.options[2] = new Option("Телефон",2);
+    newobj.options[3] = new Option("Почта",3);
+    newobj.options[4] = new Option("Дата",4);
+    newobj.options[5] = new Option("Валюта",5);
+    newobj.options[6] = new Option("Справочник","root");
     newobj.className = "form-select";
     newobj.addEventListener("change",on_sel);
     newCell.appendChild(newobj);
+}
+function close_sel_list(is_non_selected) {
+    if(is_non_selected)
+        select_list.options.selectedIndex = 0;
+    form_sel_list.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == form_sel_list) {
+        close_sel_list(true)
+    } 
 }

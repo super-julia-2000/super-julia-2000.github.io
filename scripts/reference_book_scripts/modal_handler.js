@@ -1,5 +1,5 @@
-var form_create_group = document.getElementById("form_create_group");
-var form_create_list = document.getElementById("form_create_list");
+const form_create_group = document.getElementById("form_create_group");
+const form_create_list = document.getElementById("form_create_list");
 function create_group() {
     form_create_group.style.display = "block";
 }

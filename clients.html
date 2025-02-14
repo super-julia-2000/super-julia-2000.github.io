@@ -36,7 +36,7 @@
             <button type="button" id="btn_pattern" onclick="client_switch(this)" class="btn btn-light">Шаблон</button>
         </div>
         <!--  book_of_clients  -->
-        <div class="container-fluid text-center" hidden>
+        <div id="book_of_clients" class="container-fluid text-center">
             <div class="container for-tb-back">
                 <div class="container" style="width: 35em; max-width: 100%;">
                     <div class="mt-4" style="width: 30em; max-width: 100%;">
@@ -88,8 +88,8 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5 ps-1 pe-1 for-tb-back">
-            <button type="button" onclick = "content_properties_tb()" class="btn mt-1 mx-auto btn-light">Добавить</button>
+        <div hidden id="form_properties" class="text-center mt-5 ps-1 pe-1 for-tb-back">
+            <button type="button" onclick="content_properties_tb()" class="btn mt-1 mx-auto btn-light">Добавить</button>
             <div id="client_pattern" class="container-fluid">
                 <div class=" table-responsive mt-1 tab text-center" style="height: 40 em;max-height: 100%;">
                     <table class="table table-bordered  mx-auto ">
@@ -130,20 +130,20 @@
                             <tr>
                                 <td> </td>
                                 <td>Почта</td>
-                                <td>Почта</td> 
+                                <td>Почта</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+            <button type="button" onclick="content_properties_tb()" class="btn mt-1 mx-auto btn-light">Сохранить изменения</button>
         </div>
         <!-- Modal content -->
         <div id="form_sel_list" class="modal">
             <!-- Modal content -->
             <div class="container modal-content" style="height: 30em; max-height: 100%;">
                 <input type="text" class="form-control" placeholder="Название">
-                <button type="button" onclick="close_group_creater()"
-                            class="btn btn-secondary mt-3">Поиск</button>
+                <button type="button" onclick="close_group_creater()" class="btn btn-secondary mt-3">Поиск</button>
                 <div class=" table-responsive mt-3 tab  text-center" style="height: 10 em;max-height: 100%;">
                     <table class="table table-bordered  mx-auto ">
                         <thead>
@@ -152,66 +152,6 @@
                             </tr>
                         </thead>
                         <tbody id="tb_sel_list">
-                            <!--<tr id="tag" class="table-default">
-                                <td><input onclick="sel_tr(this)" type = "checkbox"></td>
-                                <td>
-                                    jfkfkdkslsl;alslslsldkdlemmmmmmmmmmm
-                                </td>
-                                <td>10</td>
-                                <td>04.02.25</td>
-                                <td>04.02.25</td>
-                            </tr>-->
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
-                            <tr>
-                                <td><label class="float-start">Строка</label></td>
-                            </tr>
                             <tr>
                                 <td><label class="float-start">Строка</label></td>
                             </tr>
@@ -224,7 +164,7 @@
                             class="btn btn-secondary w-100">Выбрать</button>
                     </div>
                     <div class="col">
-                        <button type="button" onclick="close_group_creater()"
+                        <button type="button" onclick="close_sel_list(true)"
                             class="btn btn-secondary w-100">Отмена</button>
                     </div>
                 </div>
