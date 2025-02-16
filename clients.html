@@ -10,8 +10,9 @@
     <link href="./styles/nav_bar.css" rel="stylesheet">
     <link href="./styles/modal.css" rel="stylesheet">
 </head>
-
+<!---->
 <body class="gen-back">
+    <object type="text/html" data="file.html"></object>
     <input type="checkbox" id="nav-toggle" hidden>
     <nav class="nav pe-2 ps-2">
         <label for="nav-toggle" class="nav-toggle" onclick></label>
@@ -61,7 +62,6 @@
             <div class="text-center mt-5 ps-1 pe-1 for-tb-back">
                 <button type="button" class="btn mt-1 mx-auto btn-light">Добавить</button>
                 <button type="button" class="btn mt-1 mx-auto btn-light">Удалить</button>
-                <button type="button" onclick="Export()" class="btn mt-1 mx-auto btn-light">Экспорт</button>
                 <div class=" table-responsive mt-1 tab text-center">
                     <table class="table table-bordered  mx-auto ">
                         <thead>
@@ -85,6 +85,24 @@
                             </tr>-->
                         </tbody>
                     </table>
+                </div>
+                <button type="button" onclick="Export()" class="btn mt-1 mx-auto btn-light">Экспорт</button>
+                <button type="button" onclick="open_import()" class="btn mt-1 mx-auto btn-light">Импорт</button>
+            </div>
+        </div>
+        <!--modal of import form -->
+        <div id="import_form" class="modal">
+            <!-- Modal content -->
+            <div class="container modal-content" style="width: 30em; max-width: 100%;">
+                <input type="file"/>
+                <div class = "row">
+                    <div class = "col">
+                        <button type="button" onclick="content_properties_tb()" class="btn mt-1 mx-auto btn-secondary w-100">Отправить</button>
+                    </div>
+                    <div class = "col">
+                        <button type="button" onclick="close_import_form()"
+                        class="btn mt-1 mx-auto btn-secondary w-100">Отмена</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,7 +158,6 @@
         </div>
         <!-- Modal content -->
         <div id="form_sel_list" class="modal">
-            <!-- Modal content -->
             <div class="container modal-content" style="height: 30em; max-height: 100%;">
                 <input type="text" class="form-control" placeholder="Название">
                 <button type="button" onclick="close_group_creater()" class="btn btn-secondary mt-3">Поиск</button>
@@ -173,7 +190,7 @@
     </div>
     <script src="scripts/clients_scripts/Setup.js"></script>
     <script src="scripts/clients_scripts/tb_client_handler.js"></script>
-    <script src="scripts/clients_scripts/tb_propeties_handler.js"></script>
+    <script src="scripts/clients_scripts/modal_handler.js"></script>
     <script src="scripts/gen_scipts/nav_bar.js"></script>
 </body>
 

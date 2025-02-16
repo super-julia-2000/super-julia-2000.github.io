@@ -12,6 +12,9 @@ function Export() {
         window.URL.revokeObjectURL(url);
     }, 0);
 }
+function open_import(){
+    document.getElementById("import_form").style.display="block";
+}
 function sel_tr() {
     var a = document.getElementById("t" + this.id);
     if (a.className == "table-default")
